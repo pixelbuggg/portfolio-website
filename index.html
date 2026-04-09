@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="logo">PixelBug</div>
+    <nav class="links">
+      <a href="#features">Features</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    
+    <button id="themeToggle" class="theme-btn">☀️</button>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </header>
+
+<main class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="tag">Front-End Developer in Training</p>
+
+     <h1 id="heroTitle">
+       I build <span class="gradient-text">modern, responsive websites</span> with clean design and interactive user experiences.
+     </h1>
+
+      <p class="sub">
+        I’m developing my frontend skills through hands-on projects using HTML, CSS, JavaScript, and responsive design principles.
+      </p>
+
+      <div class="actions">
+        <button class="primary" id="workBtn" type="button">View My Work</button>
+        <button class="ghost" id="contactBtn" type="button">Contact Me</button>
+        <button class="ghost" id="changeBtn" type="button">What I Do</button>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <p class="hero-card-label">Current Focus</p>
+      <h3>Building real frontend projects</h3>
+      <ul>
+        <li>Responsive layouts</li>
+        <li>Interactive JavaScript</li>
+        <li>Modern UI styling</li>
+        <li>Portfolio development</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<div class="tech-stack">
+  <span>HTML</span>
+  <span>CSS</span>
+  <span>JavaScript</span>
+  <span>Responsive Design</span>
+  <span>GitHub</span>
+</div>
+
+  <section class="section" id="features">
+    <h2>Features</h2>
+    <div class="cards">
+      <div class="card">Responsive layout</div>
+      <div class="card">Interactive JavaScript</div>
+      <div class="card">Clean, modern styling</div>
+    </div>
+  </section>
+
+ 
+
+ <section class="section" id="work">
+  <h2>Featured Work</h2>
+  <p class="muted">A selection of projects showcasing my frontend development progress.</p>
+
+  <div class="filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="web">Web</button>
+  <button class="filter-btn" data-filter="ui">UI</button>
+  <button class="filter-btn" data-filter="app">App</button>
+</div>
+
+  <div class="projects" id="projectsGrid"></div>
+</section>
+
+<section class="section" id="stats">
+  <h2>My Progress</h2>
+
+  <div class="stats">
+    <div class="stat">
+      <h3 id="projects">0</h3>
+      <p>Projects Built</p>
+    </div>
+
+    <div class="stat">
+      <h3 id="hours">0</h3>
+      <p>Hours Coding</p>
+    </div>
+
+    <div class="stat">
+      <h3 id="coffee">0</h3>
+      <p>Coffees Consumed</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">What services do you offer?</button>
+    <div class="faq-answer">
+      <p>I build modern, responsive websites with clean design and interactive features.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Do you work on custom websites?</button>
+    <div class="faq-answer">
+      <p>Yes, I can create custom frontend layouts tailored to your brand and goals.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Are your websites mobile-friendly?</button>
+    <div class="faq-answer">
+      <p>Absolutely — responsive design is a core part of every project.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="about-box">
+    <div class="about-text">
+      <p class="section-label">About Me</p>
+      <h2>Aspiring Front-End Developer focused on building clean, responsive user experiences.</h2>
+      <p class="muted">
+        I’m developing my front-end skills through hands-on projects that focus on modern design, responsive layouts, and interactive JavaScript features. I enjoy turning ideas into functional, user-friendly websites and continuously improving through practical work. I also have a degree in media arts and a genuine love for web development.
+      </p>
+    </div>
+
+    <div class="about-highlights">
+      <div class="highlight-card">
+        <h3>Current Focus</h3>
+        <p>Responsive design, interactive UI, and building portfolio-ready frontend projects.</p>
+      </div>
+
+      <div class="highlight-card">
+        <h3>Tools I Use</h3>
+        <p>HTML, CSS, JavaScript, GitHub, Visual Studio Code, and responsive design techniques.</p>
+      </div>
+
+      <div class="highlight-card">
+        <h3>Goal</h3>
+        <p>To secure a junior front-end developer role and continue growing through real-world projects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p class="muted">
+  Open to junior front-end opportunities and freelance work. Feel free to reach out.
+  </p>
+
+  <form id="contactForm" class="contact-form">
+    <input type="text" id="name" placeholder="Your name" />
+    <input type="email" id="email" placeholder="Your email" />
+    <textarea id="message" placeholder="Your message"></textarea>
+    <button type="submit" class="primary">Send message</button>
+  </form>
+
+  <p id="formMsg"></p>
+</section>
+
+<div class="modal" id="projectModal">
+  <div class="project-panel">
+    <button class="panel-close" id="closeProjectModal">&times;</button>
+
+    <div id="modalThumb" class="panel-thumb"></div>
+
+    <div class="panel-body">
+      <span id="modalCategory" class="panel-tag"></span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+
+      <div>
+        <h4 class="panel-label">Tech Stack</h4>
+        <div id="modalTech" class="modal-tech"></div>
+      </div>
+
+      <a id="modalLink" class="modal-link" target="_blank" href="#">View Project</a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p class="footer-brand">PixelBug / Tigs Web</p>
+    <p class="footer-text">Aspiring Front-End Developer building modern, responsive websites.</p>
+
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/pixelbuggg" target="_blank">GitHub</a>
+    </div>
+
+    <p class="footer-copy">© 2026 Caroline Bull. Built with HTML, CSS & JavaScript.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
